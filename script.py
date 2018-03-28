@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 # we are ingnoring the warnings given by seaborn
 import warnings
@@ -13,11 +14,27 @@ df_iris=pd.read_csv('iris.csv')
 
 # test if the file is imported correctly
 print df_iris.head(10)
+# since we are keeping the serial number as x in histograms 
+df_iris['sn'] = pd.Series(np.arange(1, 151))
+# see if the sn has been added
+print df_iris.head(10)
+
+#for scatterplot
+def scatter(ser, x_label, y_label, color):
+    fig, (ax1) = plt.subplots(ncols=1, sharey=True)
+    plt.scatter(ser.index, ser, c=color)
+    ax1.set_xlabel(x_label)
+    ax1.set_ylabel(y_label)
+    plt.show()
+    
+
 # saving each numercial column as pandas series 
 speal_length =  df_iris['Sepal Length']
 speal_width =  df_iris['Sepal Width']
 petal_length =  df_iris['Petal Length']
 petal_width =  df_iris['Petal Width']
+
+
 
 
 print " *******************************************************************************"
@@ -37,6 +54,26 @@ print 'Standard Deviation : ',  speal_length.std()
 print 'Coefficient of Variation : '	, speal_length.std() / speal_length.mean() * 100, '%'
 print 'Skewness : ', speal_length.skew()	
 print 'Kurtosis : ', speal_length.kurtosis()
+fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
+sb.boxplot(x='Sepal Length',y='Species',data=df_iris,linewidth=2, ax=ax1)
+sb.boxplot(x='Sepal Width',y='Species',data=df_iris,linewidth=2,  ax=ax2)
+fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
+sb.boxplot(x='Petal Length',y='Species',data=df_iris,linewidth=2, ax=ax1)
+sb.boxplot(x='Petal Width',y='Species',data=df_iris,linewidth=2,  ax=ax2)
+scatter(speal_length,'Index of Values', 'Sepal Length in CM', 'red' )
+scatter(petal_length,'Index of Values', 'Petal Length in CM', 'green' )
+scatter(speal_width,'Index of Values', 'Sepal Width in CM', 'blue' )
+scatter(petal_width,'Index of Values', 'Petal Width in CM', 'yellow' )
+pd.plotting.bootstrap_plot(speal_length, color='r')
+pd.plotting.bootstrap_plot(petal_length, color='g')
+
+
+
+
+
+
+# this is the part where we generate histogram, scatter plots, 
+# since when we asked in the class we saide that the 
 print " *******************************************************************************"
 
 
@@ -56,6 +93,7 @@ print 'Standard Deviation : ',  speal_width.std()
 print 'Coefficient of Variation : '	, speal_width.std() / speal_width.mean() * 100, '%'
 print 'Skewness : ', speal_width.skew()	
 print 'Kurtosis : ', speal_width.kurtosis()
+
 print " *******************************************************************************"
 
 
