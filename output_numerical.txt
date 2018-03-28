@@ -1,0 +1,61 @@
+*******************************************************************************
+For Sepal Length :- 
+Count : 150
+Minimum : 4.3
+Maximum :  7.9
+Mean :  5.84333333333
+Median :  5.8
+Mode :  5.0
+Quartile 1 : 5.1
+Range :  3.6
+Variance :  0.685693512304
+Standard Deviation :  0.828066127978
+Coefficient of Variation :  14.1711259779 %
+Skewness :  0.314910956637
+Kurtosis :  -0.552064041316
+ *******************************************************************************
+For Sepal Width :- 
+Count : 150
+Minimum : 2.0
+Maximum :  4.4
+Mean :  3.054
+Median :  3.0
+Mode :  3.0
+Quartile 1 : 2.8
+Range :  2.4
+Variance :  0.188004026846
+Standard Deviation :  0.433594311362
+Coefficient of Variation :  14.1975871435 %
+Skewness :  0.334052662172
+Kurtosis :  0.290781062365
+ *******************************************************************************
+For Petal Length:- 
+Count : 150
+Minimum : 1.0
+Maximum :  6.9
+Mean :  3.75866666667
+Median :  4.35
+Mode :  1.5
+Quartile 1 : 1.6
+Range :  5.9
+Variance :  3.11317941834
+Standard Deviation :  1.76442041995
+Coefficient of Variation :  46.9427213538 %
+Skewness :  -0.274464252474
+Kurtosis :  -1.40192080065
+ *******************************************************************************
+For Petal Width :- 
+Count : 150
+Minimum : 0.1
+Maximum :  2.5
+Mean :  1.19866666667
+Median :  1.3
+Mode :  0.2
+Quartile 1 : 0.3
+Range :  2.4
+Variance :  0.582414317673
+Standard Deviation :  0.763160741701
+Coefficient of Variation :  63.6674701085 %
+Skewness :  -0.104996562144
+Kurtosis :  -1.33975417114
+ *******************************************************************************

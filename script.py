@@ -54,26 +54,8 @@ print 'Standard Deviation : ',  speal_length.std()
 print 'Coefficient of Variation : '	, speal_length.std() / speal_length.mean() * 100, '%'
 print 'Skewness : ', speal_length.skew()	
 print 'Kurtosis : ', speal_length.kurtosis()
-fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
-sb.boxplot(x='Sepal Length',y='Species',data=df_iris,linewidth=2, ax=ax1)
-sb.boxplot(x='Sepal Width',y='Species',data=df_iris,linewidth=2,  ax=ax2)
-fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
-sb.boxplot(x='Petal Length',y='Species',data=df_iris,linewidth=2, ax=ax1)
-sb.boxplot(x='Petal Width',y='Species',data=df_iris,linewidth=2,  ax=ax2)
-scatter(speal_length,'Index of Values', 'Sepal Length in CM', 'red' )
-scatter(petal_length,'Index of Values', 'Petal Length in CM', 'green' )
-scatter(speal_width,'Index of Values', 'Sepal Width in CM', 'blue' )
-scatter(petal_width,'Index of Values', 'Petal Width in CM', 'yellow' )
-pd.plotting.bootstrap_plot(speal_length, color='r')
-pd.plotting.bootstrap_plot(petal_length, color='g')
 
 
-
-
-
-
-# this is the part where we generate histogram, scatter plots, 
-# since when we asked in the class we saide that the 
 print " *******************************************************************************"
 
 
@@ -134,3 +116,23 @@ print 'Kurtosis : ', petal_width.kurtosis()
 print " *******************************************************************************"
 
 
+# this is the part where we generate histogram, scatter plots, 
+# since when we asked in the class we saide that the 
+fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
+sb.boxplot(x='Sepal Length',y='Species',data=df_iris,linewidth=2, ax=ax1)
+sb.boxplot(x='Sepal Width',y='Species',data=df_iris,linewidth=2,  ax=ax2)
+fig, (ax1, ax2) = plt.subplots(ncols=2, sharey=True)
+sb.boxplot(x='Petal Length',y='Species',data=df_iris,linewidth=2, ax=ax1)
+sb.boxplot(x='Petal Width',y='Species',data=df_iris,linewidth=2,  ax=ax2)
+scatter(speal_length,'Index of Values', 'Sepal Length in CM', 'red' )
+scatter(petal_length,'Index of Values', 'Petal Length in CM', 'green' )
+scatter(speal_width,'Index of Values', 'Sepal Width in CM', 'blue' )
+scatter(petal_width,'Index of Values', 'Petal Width in CM', 'yellow' )
+print 'Histograms for Sepal Length in Red'
+pd.plotting.bootstrap_plot(speal_length, color='r')
+print 'Histograms for Petal Length in Green'
+pd.plotting.bootstrap_plot(petal_length, color='g')
+print 'Histograms for Sepal Width in Blue'
+pd.plotting.bootstrap_plot(speal_width, color='b')
+print 'Histograms for Petal Width in Yellow'
+pd.plotting.bootstrap_plot(petal_width, color='y')
